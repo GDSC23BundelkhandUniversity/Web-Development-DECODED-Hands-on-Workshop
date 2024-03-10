@@ -22,4 +22,4 @@
 ### Daily attendance and workshop scores are updated on the official website of [GDSC-BU](https://gdsc23bundelkhanduniversity.github.io/web-workshop.html). Check your name for the latest information. Stay informed and keep track of your progress!
 ![Screenshot (1032)](https://github.com/yashxjain/Webworkshop/assets/114987574/f432cf69-49b4-41a3-b410-148d8d39efb6)
 
-# For any queries contact on : 8053753044 
+# For any queries drop your question on : [Telegram Open Chat Community](https://t.me/gdsc_bu23telegram)
