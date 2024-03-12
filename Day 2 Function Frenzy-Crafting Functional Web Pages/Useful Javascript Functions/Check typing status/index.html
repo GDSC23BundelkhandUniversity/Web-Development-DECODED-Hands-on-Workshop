@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Check Typing Status</title>
+  </head>
+
+  <body>
+    <h1>Creating Typing status</h1>
+    <div class="box">
+      <p id="typingStatus" style="display: none">Typing...</p>
+      <hr />
+      <textarea id="chatbox" cols="30" rows="3"></textarea>
+    </div>
+
+    <script>
+      const inputBox = document.getElementById("chatbox");
+      const typingStatus = document.getElementById("typingStatus");
+      let typingTimer;
+      const showTyping = () => (typingStatus.style.display = "block");
+      const hideTyping = () => (typingStatus.style.display = "none");
+      const handleTyping = () => {
+        clearTimeout(typingTimer);
+        showTyping();
+        typingTimer = setTimeout(hideTyping, 1000);
+      };
+      inputBox.addEventListener("keydown", handleTyping);
+    </script>
+  </body>
+</html>

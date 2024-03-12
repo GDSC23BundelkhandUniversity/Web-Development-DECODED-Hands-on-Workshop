@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2>Making Qr Code...</h2>
+
+    <div id="qrcode"></div>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+   
+    <script> 
+    let qr = new QRCode(document.getElementById("qrcode"),{
+        text: "Your data",
+        width: 128, 
+        height: 128,
+        colorDark : "#000000", 
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H
+    });
+    </script>
+</body>
+</html>

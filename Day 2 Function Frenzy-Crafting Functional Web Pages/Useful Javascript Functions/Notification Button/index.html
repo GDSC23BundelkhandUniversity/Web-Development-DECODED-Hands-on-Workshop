@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notification Example</title>
+  </head>
+
+  <body>
+    <button id="notifyBtn">Notify Me</button>
+
+    <script>
+      // Function to request permission and show notification
+      function showNotification() {
+        Notification.requestPermission().then((permission) => {
+          if (permission === "granted") {
+            new Notification("Ab follow kre bina mat jana..👋");
+          }
+        });
+      }
+      notifyBtn.addEventListener("click", showNotification);
+    </script>
+  </body>
+</html>

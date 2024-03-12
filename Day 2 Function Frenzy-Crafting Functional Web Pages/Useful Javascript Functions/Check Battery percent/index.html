@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Check Battery Status</title>
+  </head>
+
+  <body>
+    <h2>Battery Level: <span id="batteryLevel">0%</span></h2>
+
+    <script>
+      const batteryLevel = document.getElementById("batteryLevel");
+      navigator.getBattery().then((battery) => {
+        const update = () => {
+          batteryLevel.textContent = `${Math.round(battery.level * 100)}%`;
+        };
+        update();
+        battery.addEventListener("levelchange", update);
+      });
+    </script>
+  </body>
+</html>

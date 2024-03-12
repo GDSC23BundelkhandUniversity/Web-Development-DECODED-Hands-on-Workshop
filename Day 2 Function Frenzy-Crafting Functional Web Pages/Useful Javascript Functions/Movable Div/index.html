@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Draggable Div</title>
+    <style>
+      .draggable {
+        width: 150px;
+        height: 150px;
+        background-color: #053a25;
+        color: #fff;
+        text-align: center;
+        line-height: 100px;
+        position: absolute;
+        cursor: move;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>lets make the movable div:</h2>
+    <div id="draggable" class="draggable"></div>
+    <!-- make the div CSS position absolute  -->
+    <script>
+      draggable.onmousedown = (e) => {
+        const offsetX = e.clientX - draggable.getBoundingClientRect().left,
+          offsetY = e.clientY - draggable.getBoundingClientRect().top;
+        document.onmousemove = (e) => {
+          draggable.style.left = e.clientX - offsetX + "px";
+          draggable.style.top = e.clientY - offsetY + "px";
+        };
+        document.onmouseup = () => (document.onmousemove = null);
+      };
+    </script>
+  </body>
+</html>
